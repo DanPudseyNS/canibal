@@ -1,0 +1,23 @@
+.IntroWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.Intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.ButtonWrapper {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin: auto;
+  text-align: center;
+}
