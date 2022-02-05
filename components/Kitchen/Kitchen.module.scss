@@ -32,12 +32,19 @@
   bottom: 18rem;
   width: 12rem;
   left: 18rem;
+  transition: all ease-in-out 0.4s;
 
   img {
     width: 100%;
   }
 }
 
+// Positions
+.ChefIsOnTheBody {
+  bottom: 12rem;
+}
+
+// Furniture
 .TopWall {
   position: absolute;
   top: 0;
