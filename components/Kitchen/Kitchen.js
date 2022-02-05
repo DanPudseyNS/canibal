@@ -10,6 +10,9 @@ export const Kitchen = () => {
       <div className={styles.ChefWrapper}>
         <img src="./images/Chef.svg" alt="Body" />
       </div>
+      <div className={styles.TopWall}></div>
+      <div className={styles.BottomWall}></div>
+      <div className={styles.Door}></div>
     </section>
   );
 };
