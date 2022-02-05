@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import Header from "@components/Header/Header";
-import Footer from "@components/Footer";
 import Screen from "@components/Screen";
+import ReactTypingEffect from "react-typing-effect";
 import styles from "./Index.module.scss";
 
 export const Home = () => {
   const [seeIntro, setSeeIntro] = useState(true);
+  const [messageNumber, setMessageNumber] = useState(1);
+  const [buttonMessage, setButtonMessage] = useState("Next");
   const introMessage = () => {
-    setSeeIntro(false);
+    console.log(messageNumber);
+    setMessageNumber(messageNumber + 1);
+    if (messageNumber === 1) setButtonMessage("Play");
+    if (messageNumber === 2) {
+      setSeeIntro(false);
+    }
   };
 
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>Canibål</title>
         <link rel="icon" href="/favicon.ico" />
@@ -28,9 +34,33 @@ export const Home = () => {
         {seeIntro && (
           <section className={styles.IntroWrapper}>
             <div className={styles.Intro}>
-              <Header title="Welcome to restaurant Canibål" />
+              <header className={styles.Header}>
+                <div className="Header__Chef">
+                  <img src="./images/chef.png" alt="Chef's Kiss" />
+                </div>
+                {messageNumber === 1 && (
+                  <h1>
+                    <ReactTypingEffect
+                      text={["Welcome to restaurant Canibål"]}
+                      typingDelay={10}
+                      speed={25}
+                      eraseDelay={1000000}
+                    />
+                  </h1>
+                )}
+                {messageNumber === 2 && (
+                  <h1>
+                    <ReactTypingEffect
+                      text={["We must serve our guests!"]}
+                      typingDelay={10}
+                      speed={25}
+                      eraseDelay={1000000}
+                    />
+                  </h1>
+                )}
+              </header>
               <div className={styles.ButtonWrapper}>
-                <button onClick={introMessage}>Play</button>
+                <button onClick={introMessage}>{buttonMessage}</button>
               </div>
             </div>
           </section>

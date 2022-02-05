@@ -1,7 +1,10 @@
+import styles from "./Welcome/Welcome.module.scss";
+import ReactTypingEffect from "react-typing-effect";
+
 export const Screen = () => {
   return (
-    <section>
-      <h1>We must serve our guests!</h1>
+    <section className={styles.Welcome}>
+      <header>YOLO</header>
     </section>
   );
 };

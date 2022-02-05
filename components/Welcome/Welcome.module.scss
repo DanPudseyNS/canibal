@@ -1,0 +1,17 @@
+.Welcome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+}
+
+.WelcomeDescription {
+  width: 100%;
+}
