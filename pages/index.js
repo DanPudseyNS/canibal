@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Head from "next/head";
-import Screen from "@components/Screen";
+import Screen from "@components/Screen/Screen";
 import ReactTypingEffect from "react-typing-effect";
 import styles from "./Index.module.scss";
 

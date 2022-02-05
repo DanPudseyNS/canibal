@@ -1,4 +1,4 @@
-.Welcome {
+.Screen {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -12,6 +12,14 @@
   }
 }
 
-.WelcomeDescription {
+.ScreenDescription {
   width: 100%;
+}
+
+.PlayableArea {
+  position: relative;
+  width: 102.4rem;
+  height: 57.6rem;
+  display: flex;
+  justify-content: space-between;
 }

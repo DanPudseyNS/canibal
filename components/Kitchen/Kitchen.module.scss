@@ -1,0 +1,26 @@
+.Kitchen {
+  width: 40rem;
+  background-color: #efefef;
+}
+
+.BodyWrapper {
+  position: absolute;
+  bottom: 2rem;
+  width: 36rem;
+  left: 2rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.ChefWrapper {
+  position: absolute;
+  bottom: 18rem;
+  width: 12rem;
+  left: 18rem;
+
+  img {
+    width: 100%;
+  }
+}
