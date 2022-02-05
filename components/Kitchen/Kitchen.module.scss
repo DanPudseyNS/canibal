@@ -7,13 +7,24 @@
 
 .BodyWrapper {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 2rem;
   width: 36rem;
+  height: 16rem;
   left: 2rem;
+  background-color: $wall;
+}
 
-  img {
-    width: 100%;
-  }
+.Body {
+  width: 26rem;
+  cursor: pointer;
+}
+
+.BodyShake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
 }
 
 .ChefWrapper {

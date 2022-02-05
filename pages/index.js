@@ -9,7 +9,6 @@ export const Home = () => {
   const [messageNumber, setMessageNumber] = useState(1);
   const [buttonMessage, setButtonMessage] = useState("Next");
   const introMessage = () => {
-    console.log(messageNumber);
     setMessageNumber(messageNumber + 1);
     if (messageNumber === 1) setButtonMessage("Play");
     if (messageNumber === 2) {

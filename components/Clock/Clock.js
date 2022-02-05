@@ -2,16 +2,17 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./Clock.module.scss";
 
 export const Clock = () => {
-  const [time, setTime] = useState(100);
+  const [time, setTime] = useState(180);
   const [pause, setPause] = useState(false);
 
   let intervalRef = useRef();
 
-  const decreaseTime = () => setTime((prev) => prev - 1);
+  const decreaseTime = () => {
+    setTime((prev) => prev - 1);
+  };
 
   useEffect(() => {
     intervalRef.current = setInterval(decreaseTime, 1000);
-
     return () => clearInterval(intervalRef.current);
   }, []);
 
@@ -26,7 +27,7 @@ export const Clock = () => {
 
   return (
     <section>
-      <div className={styles.Clock}>{time}</div>
+      <div className={styles.Clock}>{time > 0 ? time : 0}</div>
       {/* <button onClick={handleClick}>{pause ? "Run" : "Pause"}</button> */}
     </section>
   );
